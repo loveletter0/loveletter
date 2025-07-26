@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'lingyan.apps.LingyanConfig'
 ]
 
 MIDDLEWARE = [
@@ -75,8 +76,12 @@ WSGI_APPLICATION = 'loveletter.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',  # 以MySQL为例
+        'NAME': 'lingyan_django',
+        'USER': 'lingyan',
+        'PASSWORD': 'denglingyan123!',
+        'HOST': 'rm-bp1m9214w950bb601mo.mysql.rds.aliyuncs.com',
+        'PORT': '3306',
     }
 }
 

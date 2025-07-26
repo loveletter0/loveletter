@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from lingyan import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/adduser', views.add_user),
+    path('api/deluser', views.del_user),
+    path('api/chtel', views.change_telephone),
+    path('api/query', views.query_user),
 ]
